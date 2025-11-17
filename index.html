@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Kekopis je nezávislý online magazín, který spojuje satiru, názory proti proudu a reportáže o mentalitě, společnosti i příbězích Kekáčů."
+    />
+    <meta name="author" content="Redakce Kekopis" />
+    <meta
+      name="keywords"
+      content="Kekopis, nezávislá žurnalistika, satira, mentalita, příběhy, předplatné"
+    />
+    <title>Kekopis | Nezávislá žurnalistika</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./icons/favicon.ico" type="image/x-icon" />
+  </head>
+  <body id="body">
+    <header id="header">
+      <div class="navigation-bar">
+        <nav class="navigation">
+          <div id="menuToggle">
+            <input
+              type="checkbox"
+              id="menuCheckbox"
+              class="hamburger__checkbox"
+            />
+
+            <span class="hamburger__icon"></span>
+            <span class="hamburger__icon"></span>
+            <span class="hamburger__icon"></span>
+
+            <ul id="menu" class="nav-header">
+              <li class="list__item">
+                <a class="nav__link nav__header" href="pribeh/">Příběh</a>
+              </li>
+              <li class="list__item">
+                <a class="nav__link nav__header" href="mentalita/">Mentalita</a>
+              </li>
+              <li class="list__item">
+                <a class="nav__link nav__header" href="o-nas/">O nás</a>
+              </li>
+              <li class="list__item">
+                <a class="nav__link nav__header" href="predplatne/">Předplatné</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="logo_header">
+          <a href="index.html"><img src="./icons/logo.png" class="logo" alt="Kekopis logo" /></a>
+        </div>
+        <div class="search_header">
+          <form action="#" method="get" id="search-form">
+            <input
+              type="text"
+              placeholder="Vyhledej..."
+              id="text"
+              class="search__field"
+            />
+          </form>
+          <button
+            type="submit"
+            form="search-form"
+            value="Submit"
+            class="search-btn button-header btn icon__search"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <h1 class="heading__h1 main__h1">Nejčtenější články</h1>
+
+      <section class="grid grid__easy">
+        <article class="article__grid">
+          <a href="clanky/toxic-maskulinita/" class="article__link"
+            ><img
+              class="article__img"
+              src="./blog-img/toxic.png"
+              alt="Portrét muže skrývajícího emoce"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/toxic-maskulinita/" class="article__link">
+                <h3 class="heading__h3 article__h3">Toxic masculinity</h3></a
+              >
+              <p class="article__text paragraph">
+                Nikdy jsem nebrečel… aneb jak společenské normy formují mužskou identitu a jak
+                ji můžeme přepsat pomocí emoční inteligence.
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Mentalita
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-11-17" class="article__date">
+                  17. listopadu 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="article__grid">
+          <a href="clanky/uvod-do-casopisu-kekopisu/" class="article__link"
+            ><img
+              class="article__img"
+              src="blog-img/uvod.png"
+              alt="Ilustrace Kekáčova u Hlíny a Betonu"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/uvod-do-casopisu-kekopisu/" class="article__link">
+                <h3 class="heading__h3 article__h3">
+                  Úvod do časopisu Kekopisu
+                </h3></a
+              >
+              <p class="article__text paragraph">
+                Něco málo o samotném nadčasovém časopisu… Vizuální inspirace pochází ze středověkých
+                kodexů, obsahovaly iniciály, iluminace a bordury a také tím chci navodit takový víc
+                „spešl vibe". Co vše se za Kekopisem skrývá a proč vůbec vznikl?
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Příběh
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-05-15" class="article__date">
+                  15. května 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <hr class="main-blue__line line" />
+
+      <aside class="main-support__ad">
+        <h4 class="heading__h4 support__h4">
+          Podpořte myšlení proti proudu
+        </h4>
+        <div class="support-ad__content">
+          <p class="ad-content__p paragraph">
+            Nejsme další spotřební médium. Píšeme satiricky, myslíme kriticky
+            a nutíme přemýšlet. Pokud s námi souzníte, staňte se součástí
+            komunity, která vidí svět trochu jinak.
+          </p>
+          <div class="ad-content__box">
+            <a href="predplatne/" class="btn ad-content__btn btn-main-blue btn-large">
+              Předplatné
+            </a>
+          </div>
+        </div>
+        <p class="ad-content__thanks">Děkujeme, váš tým Kekopis</p>
+      </aside>
+
+      <hr class="main-blue__line line" />
+
+      <!-- NEJNOVEJSI CLANKY -->
+
+      <h2 class="heading__h2 main__h2">Nejnovější články</h2>
+
+      <section class="grid grid__complex">
+        <article class="article__grid article__complex article__1x2">
+          <a href="clanky/pribeh-organismus-keke/" class="article__link"
+            ><img
+              class="article__img"
+              src="blog-img/uvod-2-nechapu.png"
+              alt="Ilustrace s nápisem 'JÁ TO NECHÁPU' a čtenářem s otazníky"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/pribeh-organismus-keke/" class="article__link">
+                <h3 class="heading__h3 article__h3">
+                  Příběh organismus Keke
+                </h3></a
+              >
+              <p class="article__text paragraph">
+                Na Zemi, v pravěké době, po permském vymírání a těsně před dinosaury, existoval
+                organismus Keke, který se postupem milionů let vyvinul v Keke Uže. Svět byl
+                rozdělen na dvě města a mezi nimi existoval Meziprostor — místo balancu.
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Příběh
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-05-08" class="article__date">
+                  8. května 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="article__grid article__complex">
+          <a href="clanky/obyvatele-socialnich-siti/" class="article__link"
+            ><img
+              class="article__img"
+              src="blog-img/hihimeme.png"
+              alt="Satirická ilustrace o úrovni mozkových buněk na sociálních sítích"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/obyvatele-socialnich-siti/" class="article__link">
+                <h3 class="heading__h3 article__h3">
+                  Obyvatelé sociálních sítí mají opravdu tak malý mozek?
+                </h3></a
+              >
+              <p class="article__text paragraph">
+                Dopaminová ekonomika, která soupeří s naším offline časem. Jak nás algoritmy
+                mapují, proč milují emoční výkyvy a co na to Kekáč z TikToku?
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Mentalita
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-11-16" class="article__date">
+                  16. listopadu 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="article__grid article__complex">
+          <a href="clanky/uvod-do-casopisu-kekopisu/" class="article__link"
+            ><img
+              class="article__img"
+              src="./blog-img/uvod.png"
+              alt="Ilustrace středověkého kodexu časopisu Kekopis"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/uvod-do-casopisu-kekopisu/" class="article__link">
+                <h3 class="heading__h3 article__h3">
+                  Neztratit se: Příběh moderátorky, která vypnula autopilota
+                </h3></a
+              >
+              <p class="article__text paragraph">
+                Jitka Konečná roky vysílala ranní zpravodajství, až ji mlha
+                notifikací přivedla k totální pauze. Popisuje, jak znovu staví
+                hranice mezi publikem, rodinou a sebou.
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Příběh
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-06-05" class="article__date">
+                  5. června 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="article__grid article__complex article__2x1">
+          <a href="clanky/toxic-maskulinita/" class="article__link"
+            ><img
+              class="article__img"
+              src="./blog-img/toxic.png"
+              alt="Silueta muže, který se snaží zadržet emoce"
+            />
+          </a>
+
+          <div class="article__wrapper">
+            <div>
+              <a href="clanky/toxic-maskulinita/" class="article__link">
+                <h3 class="heading__h3 article__h3">Toxic masculinity</h3></a
+              >
+              <p class="article__text paragraph">
+                CEO Kek a Poetický Šneček rozebírají, proč se toxická maskulinita drží jako
+                žvýkačka na podrážce a jak ji přetavit v emoční inteligenci.
+              </p>
+            </div>
+            <div class="categories-author__date">
+              <div class="article__categories">
+                <div>
+                  <button class="btn btn-main-blue article__category">
+                    Mentalita
+                  </button>
+                </div>
+              </div>
+              <div class="author__date">
+                <time datetime="2025-11-17" class="article__date">
+                  17. listopadu 2025
+                </time>
+                <address class="author">
+                  <a href="#" rel="author">Básník Šnek</a>
+                </address>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+      </section>
+    </main>
+    <footer id="footer-section">
+      <div class="footer-wrapper">
+        <div class="footer-box box-logo">
+          <a href="index.html"><img src="./icons/logo.png" class="logo" alt="Kekopis logo" /></a>
+        </div>
+
+        <hr class="white__line line" />
+
+        <div class="footer-box about-us">
+          <h4 class="heading__h4" style="color: white; margin-bottom: 15px;">O nás</h4>
+          <p class="paragraph" style="color: white; line-height: 1.6;">
+            Kekopis je nadčasový časopis, který jde proti proudu. Pozorujeme společnost
+            očima Kekáčů, píšeme satiricky, myslíme kriticky. Nejsme spotřební médium –
+            jsme prostor pro myšlenky, které štípou a nutí přemýšlet.
+          </p>
+        </div>
+
+        <hr class="white__line line" />
+
+        <div class="socials footer-box">
+          <div class="socials_address">
+            <h5 class="heading__h5 socials__h5">
+              Kekopis <br />
+              nám. Winstona Churchilla 1938/4<br />
+              120 00 Praha 3
+            </h5>
+            <div class="social-logos">
+              <a href="https://www.instagram.com/kekopis/">
+                <img
+                  class="social__footer"
+                  src="./icons/instagram.svg"
+                  alt="instagram"
+                />
+              </a>
+
+            </div>
+          </div>
+          <div class="subscribe__btn">
+            <a href="predplatne/" class="btn btn_white">Předplatné</a>
+          </div>
+        </div>
+        <hr class="white__line line" />
+      </div>
+
+      <div class="footer__copyright">
+        
+
+        <span class="copyright"
+          >Copyright © 2025 Kekopis <br />Bui Duy Quan</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
