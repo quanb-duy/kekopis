@@ -107,7 +107,6 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 .btn_white:hover {
   background-color: var(--color-white);
   color: var(--secondary-color);
-  border-color: var(--color-white);
 }
 
 .btn-large {
@@ -172,7 +171,7 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
 /* header */
 
-#header {
+header {
   background-color: var(--secondary-color);
   margin-bottom: 20px;
   position: sticky;
@@ -354,7 +353,6 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -401,12 +399,10 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
   margin: var(--padding-between-sections) 0;
 }
 .main-blue__line {
-  color: var(--secondary-color);
   background-color: var(--secondary-color);
 }
 
 .white__line {
-  color: white;
   background-color: white;
   width: 100%;
 }
@@ -736,7 +732,6 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 .link-footer:hover {
   background-color: var(--color-white);
   color: var(--secondary-color);
-  border-color: var(--color-white);
 }
 
 .nav-footer {
@@ -810,6 +805,69 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
 }
 
+@media (min-width: 992px) {
+  .navigation-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 10px 0;
+
+  }
+
+  .navigation {
+    justify-self: start;
+  }
+
+  .logo_header {
+    justify-self: center;
+  }
+
+  .search_header {
+    justify-self: end;
+  }
+
+  #menuToggle .hamburger__checkbox,
+  #menuToggle .hamburger__icon {
+    display: none;
+  }
+
+  #menuToggle .nav__link {
+    color: var(--color-white);
+    border-color: transparent;
+    padding: 4px 7px;
+  }
+
+  #menuToggle {
+    display: flex;
+    align-items: center;
+  }
+
+  #menu {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    display: flex;
+    gap: 8px;
+  }
+
+  #menu .list__item {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .grid {
@@ -865,7 +923,6 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
   .article__text {
     -webkit-line-clamp: 6;
-    line-clamp: 6;
   }
 
   .article__wrapper {
@@ -893,7 +950,6 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
   .grid__complex .article__h3 {
     font-size: 20px;
     -webkit-line-clamp: 2;
-    line-clamp: 2;
   }
 
   .grid__complex .article__text,
@@ -1017,11 +1073,14 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
   .article__text {
     -webkit-line-clamp: 8;
-    line-clamp: 8;
   }
 }
 
 /* PRINT STYLES */
+
+@page {
+  margin: 12mm;
+}
 
 @media print {
   /* Global print reset */
@@ -1030,12 +1089,23 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
     color: black !important;
     box-shadow: none;
     text-shadow: none;
-    transition: none;
   }
 
   body {
     font-size: 11pt;
     line-height: 1.5;
+  }
+
+  /* Print link URLs after anchor text. */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555 !important;
+    word-break: break-all;
+  }
+  .logo_header a[href]::after,
+  .box-logo a[href]::after {
+    content: "";
   }
 
   /* Hide interactive and decorative elements */
@@ -1049,7 +1119,7 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
   }
 
   /* Header with logo */
-  #header {
+  header {
     position: relative;
     border-bottom: 2px solid black;
     margin-bottom: 15px;
@@ -1069,14 +1139,29 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
   .logo {
     display: block;
-    max-width: 150px;
+    max-width: 220px;
     height: auto;
   }
 
   /* Content layout */
   #main {
-    padding: 0 15px;
+    padding: 0 12px;
     max-width: 100%;
+  }
+
+  .main__h1 {
+    padding: 6px 0;
+    margin-bottom: 12px;
+  }
+
+  h1, h2, h3, h4, h5 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .main__h2, .post__h2 {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .grid, .article__grid, .article__wrapper,
@@ -1086,29 +1171,42 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
   /* Articles */
   .article__grid {
-    margin-bottom: 25px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .article__img {
     max-width: 100%;
     width: 100%;
     height: auto;
-    max-height: 250pt;
+    max-height: 120pt;
     object-fit: contain;
   }
 
   .article__text {
     display: block;
     -webkit-line-clamp: initial;
-    line-clamp: initial;
     -webkit-box-orient: initial;
     overflow: visible;
   }
 
   .article__h3 {
-    font-size: 18pt;
+    font-size: 16pt;
+  }
+
+  .article__text {
+    margin: 6px 0 8px;
+  }
+
+  .categories-author__date {
+    margin-top: 6px;
+  }
+
+  .author__date {
+    align-items: flex-start;
   }
 
   /* Blog posts */
@@ -1136,8 +1234,13 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
     max-width: 100%;
     width: 100%;
     height: auto;
-    max-height: 400pt;
+    max-height: 200pt;
     object-fit: contain;
+  }
+
+  .post__figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .post__lead {
@@ -1156,6 +1259,22 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
   /* Subscription and About pages */
   .subscription__plan, .about__contact {
     border: 1px solid #ccc;
+  }
+
+  .subscription__plans {
+    gap: 12px;
+  }
+
+  .subscription__plan {
+    padding: 14px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .faq__item {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .plan__featured {
@@ -1178,12 +1297,14 @@ a.btn:hover, a.btn-main-blue:hover, a.btn_white:hover {
 
   /* Footer */
   #footer-section {
-    border-top: 2px solid black;
-    margin-top: 20px;
+    display: none;
   }
 
-  .footer-wrapper {
-    text-align: center;
+  hr.line {
+    background: none !important;
+    border: 0;
+    border-top: 1px solid #999;
+    height: 0;
   }
 }
 
